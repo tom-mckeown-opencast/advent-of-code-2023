@@ -17,13 +17,6 @@ class Day02:
       "Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red",
       "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"
     ]
-  
-  def get_rgb(self, line) -> None:
-    matches = re.findall(r'(\d+) (\w+)', line)
-    result = { "red": 0, "green": 0, "blue": 0}
-    for quantity, colour in matches:
-      result[colour] = max(result[colour], int(quantity))
-    return result
 
   def solve_part_1(self) -> int:
     def is_valid(rgb) -> bool:
@@ -41,6 +34,13 @@ class Day02:
     powers = [rgb["red"] * rgb["green"] * rgb["blue"] for rgb in game_rgbs]
     return sum(powers)
 
+  def get_rgb(self, line) -> None:
+    matches = re.findall(r'(\d+) (\w+)', line)
+    result = { "red": 0, "green": 0, "blue": 0}
+    for quantity, colour in matches:
+      result[colour] = max(result[colour], int(quantity))
+    return result
+
 if __name__ == "__main__":
   day = Day02()
   # Check part 1 example
@@ -53,6 +53,6 @@ if __name__ == "__main__":
 
   # Solve
   day.load_input()
-  print("Day 1")
+  print("Day 2")
   print(f"- Part 1: {day.solve_part_1()}")
   print(f"- Part 2: {day.solve_part_2()}")
