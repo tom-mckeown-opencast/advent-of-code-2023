@@ -88,3 +88,16 @@
 3. Calculate the best hand type by substituting in the wildcard
 4. Sort in ascending order
 5. Sum the bid * placement for each card
+
+## [Day 8](./day08/day08.py) - Haunted Wasteland
+### Difficulty 6
+#### Part 1
+1. Build the network graph using the input
+2. Traverse each node starting from AAA keeping track of the steps
+3. When the current node is ZZZ return the number of steps
+#### Part 2
+1. Build the network graph using the input
+2. Get all the starting nodes (nodes matching "??A")
+3. Traverse the graph using each start node and get the steps for each
+4. Calculate the LCM for the steps to get the number of steps to get all traversal to line up
+5. This solution relies on assumptions that the examples do not show so required reading the input itself to notice the pattern
