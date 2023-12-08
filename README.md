@@ -74,3 +74,17 @@
 3. Keep track of a count of wins
 4. Calculate the product of the win count for each race
 5. This takes about a minute to calculate this way
+
+## [Day 7](./day07/day07.py) - Camel Cards
+### Difficulty 4
+#### Part 1
+1. Use an enum for the HandType and class to store the hand data (cards + bid)
+2. Set up comparator functions to allow sort to work
+3. Sort in ascending order
+4. Sum the bid * placement for each card
+#### Part 2
+1. Add an optional wildcard parameter to the hand and HandType
+2. If the wildcard is set then reduce its individual value
+3. Calculate the best hand type by substituting in the wildcard
+4. Sort in ascending order
+5. Sum the bid * placement for each card
